@@ -1,0 +1,326 @@
+{
+ "seller-payouts/00-hero-payout-dashboard": {
+  "w": 1600,
+  "h": 900,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "seller-payouts/01-discovery-seller-questions": {
+  "w": 1600,
+  "h": 988,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "seller-payouts/02-seven-systems-map": {
+  "w": 1600,
+  "h": 952,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "seller-payouts/03-payout-status-lifecycle": {
+  "w": 1600,
+  "h": 1062,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "seller-payouts/04-estimated-vs-final-payout": {
+  "w": 1600,
+  "h": 918,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "seller-payouts/05-return-window-14-to-7-days": {
+  "w": 1600,
+  "h": 888,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "seller-payouts/06-what-changed-pending-split": {
+  "w": 1600,
+  "h": 940,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "seller-payouts/07-edge-cases": {
+  "w": 1600,
+  "h": 1147,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "seller-payouts/08-final-design-four-questions": {
+  "w": 1600,
+  "h": 1024,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "commission-returns/00-hero-commission-dashboard": {
+  "w": 1600,
+  "h": 900,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "commission-returns/01-before-after-self-serve": {
+  "w": 1440,
+  "h": 920,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "commission-returns/02-category-hierarchy": {
+  "w": 1440,
+  "h": 1080,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "commission-returns/03-rule1-defaults": {
+  "w": 1440,
+  "h": 960,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "commission-returns/04-rule2-inheritance": {
+  "w": 1440,
+  "h": 1000,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "commission-returns/05-rule3-override-confirmation": {
+  "w": 1440,
+  "h": 1000,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "commission-returns/06-rule4-validation": {
+  "w": 1440,
+  "h": 1060,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "commission-returns/07-future-scope": {
+  "w": 1440,
+  "h": 1040,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "ai-image-workflow/00-cover": {
+  "w": 1986,
+  "h": 1024,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "ai-image-workflow/01-vision-keyword-to-content-pipeline": {
+  "w": 2163,
+  "h": 1238,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "ai-image-workflow/02-dashboard": {
+  "w": 2800,
+  "h": 1800,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "ai-image-workflow/03-all-jobs": {
+  "w": 2882,
+  "h": 2276,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "ai-image-workflow/04-keyword-management": {
+  "w": 2800,
+  "h": 1800,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "ai-image-workflow/05-context-selection": {
+  "w": 2800,
+  "h": 1800,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "ai-image-workflow/06-prompts": {
+  "w": 2800,
+  "h": 1800,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "ai-image-workflow/07-review": {
+  "w": 2800,
+  "h": 1800,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "ai-image-workflow/08-publish-bells": {
+  "w": 2800,
+  "h": 1800,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "prepaud-onboarding/00-hero": {
+  "w": 4800,
+  "h": 2474,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "prepaud-onboarding/01-old-design": {
+  "w": 2000,
+  "h": 6489,
+  "tall": true,
+  "sizes": [
+   700,
+   1200
+  ]
+ },
+ "prepaud-onboarding/02-new-user-flow": {
+  "w": 4800,
+  "h": 1623,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "prepaud-onboarding/03-learning-from-others": {
+  "w": 1345,
+  "h": 1004,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "prepaud-onboarding/04-intro-screen": {
+  "w": 2000,
+  "h": 1724,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "prepaud-onboarding/05-signup-screens": {
+  "w": 2000,
+  "h": 4842,
+  "tall": true,
+  "sizes": [
+   700,
+   1200
+  ]
+ },
+ "prepaud-onboarding/06-user-info-screens": {
+  "w": 2000,
+  "h": 3521,
+  "tall": true,
+  "sizes": [
+   700,
+   1200
+  ]
+ },
+ "seller-payouts/hero-crop": {
+  "w": 896,
+  "h": 558,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "commission-returns/hero-crop": {
+  "w": 896,
+  "h": 558,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ },
+ "ai-image-workflow/hero-crop": {
+  "w": 2800,
+  "h": 1800,
+  "tall": false,
+  "sizes": [
+   800,
+   1600
+  ]
+ }
+}
