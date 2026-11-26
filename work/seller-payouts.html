@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paying sellers a week sooner, with every rupee explained · Vansh Goel</title>
+<meta name="description" content="BellPost had no payout system. I designed one from scratch in three weeks. Sellers now see how much they&#x27;ll be paid, when and why, wait 7 days instead of 14, and ops handle every exception from one dashboard.">
+<meta name="theme-color" content="#0B3D2A">
+<meta property="og:title" content="Paying sellers a week sooner, with every rupee explained · Vansh Goel">
+<meta property="og:description" content="BellPost had no payout system. I designed one from scratch in three weeks. Sellers now see how much they&#x27;ll be paid, when and why, wait 7 days instead of 14, and ops handle every exception from one dashboard.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://vanshgoel.com/work/seller-payouts">
+<meta property="og:image" content="https://vanshgoel.com/assets/og-seller-payouts.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://vanshgoel.com/work/seller-payouts">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script>try{if(sessionStorage.getItem("vg-pt")&&!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("pt-enter");sessionStorage.removeItem("vg-pt")}catch(e){}</script>
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/case.css">
+</head>
+<body class="cs-page" style="--fc:#2a2a2a">
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="nav-in">
+    <a class="logo" href="../index.html" aria-label="Vansh Goel, home"><span class="ball" data-c="cue" aria-hidden="true"></span>VANSH GOEL</a>
+    <ul class="nav-links" id="menu">
+      <li><a href="../index.html#frames">Work</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#approach">Approach</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+      <li class="m-only"><a data-resume="../" href="#" target="_blank" rel="noopener" hidden>Resume ↗</a></li>
+    </ul>
+    <a class="btn btn-ghost nav-cta" data-resume="../" href="#" target="_blank" rel="noopener" hidden>Resume ↗</a>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </div>
+  <div class="cue-progress" aria-hidden="true"><i></i></div>
+</header>
+<main id="main">
+<div class="cs-head">
+  <div class="wrap">
+    <a class="back" href="../index.html#frames">← All work</a>
+    <p class="kicker"><span class="ball" data-c="black" aria-hidden="true">7</span>Frame 01 · BellPost · Seller payouts</p>
+    <h1>Paying sellers a week sooner, with every rupee explained</h1>
+    <p class="lede">BellPost had no payout system. I designed one from scratch in three weeks. Sellers now see how much they&#x27;ll be paid, when and why, wait 7 days instead of 14, and ops handle every exception from one dashboard.</p>
+    <dl class="facts"><div><dt>Role</dt><dd>Sole product designer, discovery to developer handoff</dd></div><div><dt>Team</dt><dd>Founder, 2 engineers (frontend, backend), chartered accountant, legal counsel, ops</dd></div><div><dt>Timeline</dt><dd>3 weeks, Dec 2025 to Jan 2026</dd></div><div><dt>Platform</dt><dd>Seller portal and internal admin dashboard (web)</dd></div><div class=outcome><dt>Outcome</dt><dd>Sellers paid a week sooner; payout timing stopped coming up on onboarding calls</dd></div></dl>
+  </div>
+</div>
+<div class="cs-hero"><div class="wrap"><figure class="fig" style="max-width:896px;margin-inline:auto"><button class="zoom" type="button" data-full="../assets/img/seller-payouts/hero-crop-1600.webp" aria-label="Enlarge image: BellPost seller payout dashboard with total, pending and settled payouts"><img src="../assets/img/seller-payouts/hero-crop-800.webp" srcset="../assets/img/seller-payouts/hero-crop-800.webp 800w, ../assets/img/seller-payouts/hero-crop-1600.webp 896w" sizes="(max-width: 1240px) 100vw, 1200px" width="896" height="558" alt="BellPost seller payout dashboard with total, pending and settled payouts" fetchpriority="high"></button></figure></div>
+  <p class="read-meta"><span>7 min read</span><span>11 sections</span><span>Tap any image to enlarge</span></p>
+</div>
+<article class="cs">
+<section class="cs-sec" id="overview" data-short="Overview"><div class="lab"><div class="n">01</div><h2>Overview</h2></div>
+<p>BellPost is a home-commerce marketplace that today connects 200 sellers with buyers across India. When this project started, orders and returns were already live in the seller portal. Payouts didn&#x27;t exist at all.</p>
+<p>We were onboarding our first sellers, and every call opened with the same question:</p>
+<blockquote class="say"><p>“When will I get my money?”</p></blockquote>
+<p>Until we could answer it, sellers wouldn&#x27;t commit.</p>
+</section>
+<section class="cs-sec" id="the-problem" data-short="The problem"><div class="lab"><div class="n">02</div><h2>The problem</h2></div>
+<p>From the outside, a payout looks simple: the order is delivered, the seller gets paid. Behind it, the platform has to answer five questions before any money can move:</p>
+<ol><li>Has the order been delivered, and is the return window still open?</li><li>Are the shipping charges final?</li><li>Which commission and taxes apply?</li><li>Was the order returned, cancelled or sent back to origin (RTO)?</li><li>Does the seller owe the platform anything from earlier orders?</li></ol>
+<p>None of this logic existed. So we couldn&#x27;t tell a new seller how much they&#x27;d earn, when, or why, and that answer was part of their decision to sell with us.</p>
+<blockquote class="hmw"><p><strong>How might we</strong> give sellers confidence in what they&#x27;ll earn, while protecting the marketplace from losses on returns and disputes?</p></blockquote>
+</section>
+<section class="cs-sec" id="learning-the-business-before-designing" data-short="Learning the business before designing"><div class="lab"><div class="n">03</div><h2>Learning the business before designing</h2></div>
+<p>I didn&#x27;t open Figma on day one. Payouts sit where finance, law and engineering meet, so I started with the people who understood each part.</p>
+<div class="tbl"><table class="stack"><thead><tr><th scope="col">Who</th><th scope="col">What I went to them for</th></tr></thead><tbody><tr><td data-l="Who">Founder</td><td data-l="What I went to them for">The business model, commission structure, and how much risk the marketplace could carry</td></tr><tr><td data-l="Who">Engineers</td><td data-l="What I went to them for">Constraints in the order, logistics and payment systems</td></tr><tr><td data-l="Who">Chartered accountant</td><td data-l="What I went to them for">Invoices, tax, settlements and marketplace accounting</td></tr><tr><td data-l="Who">Legal counsel</td><td data-l="What I went to them for">Rules for holding and releasing seller money</td></tr><tr><td data-l="Who">Sellers</td><td data-l="What I went to them for">I sat in on 20+ onboarding calls and listened</td></tr></tbody></table></div>
+<p>On almost every call, sellers asked the same four things:</p>
+<ul><li>“When will I receive my money?”</li><li>“What are all the deductions on your platform?”</li><li>“If I sell this much, how much will I actually get?”</li><li>“What are the RTO charges?”</li></ul>
+<p><strong>That changed the brief.</strong> Sellers weren&#x27;t just asking to be paid. They were asking to <em>see their money coming</em>. Transparency became the main design goal, not a nice-to-have.</p>
+<figure class="fig"><button class="zoom" type="button" data-full="../assets/img/seller-payouts/01-discovery-seller-questions-1600.webp" data-cap="Seller questions from 20+ onboarding calls, clustered by theme." aria-label="Enlarge image: Seller questions from 20+ onboarding calls, clustered by theme."><img src="../assets/img/seller-payouts/01-discovery-seller-questions-800.webp" srcset="../assets/img/seller-payouts/01-discovery-seller-questions-800.webp 800w, ../assets/img/seller-payouts/01-discovery-seller-questions-1600.webp 1600w" sizes="(max-width: 1240px) 100vw, 1200px" width="1600" height="988" alt="Seller questions from 20+ onboarding calls, clustered by theme." loading="lazy" decoding="async"></button><figcaption>Seller questions from 20+ onboarding calls, clustered by theme.</figcaption></figure>
+</section>
+<section class="cs-sec" id="mapping-the-system" data-short="Mapping the system"><div class="lab"><div class="n">04</div><h2>Mapping the system</h2></div>
+<p>Before designing a single screen, I listed every event that could change a seller&#x27;s payout. The result: <strong>one payout depends on seven systems agreeing with each other.</strong></p>
+<p>This map became the team&#x27;s shared reference. Every status, screen and edge case that follows traces back to one of these seven systems.</p>
+<figure class="fig"><button class="zoom" type="button" data-full="../assets/img/seller-payouts/02-seven-systems-map-1600.webp" data-cap="Seven systems feeding into one payout." aria-label="Enlarge image: Seven systems feeding into one payout."><img src="../assets/img/seller-payouts/02-seven-systems-map-800.webp" srcset="../assets/img/seller-payouts/02-seven-systems-map-800.webp 800w, ../assets/img/seller-payouts/02-seven-systems-map-1600.webp 1600w" sizes="(max-width: 1240px) 100vw, 1200px" width="1600" height="952" alt="Seven systems feeding into one payout." loading="lazy" decoding="async"></button><figcaption>Seven systems feeding into one payout.</figcaption></figure>
+</section>
+<section class="cs-sec" id="four-decisions-that-shaped-the-system" data-short="Four decisions that shaped the system"><div class="lab"><div class="n">05</div><h2>Four decisions that shaped the system</h2></div>
+<h3><span class="chip">Decision 1</span>Statuses that explain why the money hasn&#x27;t arrived</h3>
+<p class="lbl-p"><strong>Problem.</strong> A generic “Pending” tells a seller nothing. It reads as “we haven&#x27;t paid you” and sends them to support.</p>
+<p class="lbl-p"><strong>Decision.</strong> A lifecycle where every status names what&#x27;s happening behind the scenes, and what it means for the seller: <strong>Calculating</strong> (the amount may still change), <strong>Scheduled</strong> (here&#x27;s your date), <strong>Processing</strong> (money is on its way) and <strong>Processed</strong> (it&#x27;s in your bank).</p>
+<p>Failed, Reversed and Cancelled branch off this path, each with its own status and next action.</p>
+<figure class="fig"><button class="zoom" type="button" data-full="../assets/img/seller-payouts/03-payout-status-lifecycle-1600.webp" data-cap="Payout lifecycle, including the exception branches." aria-label="Enlarge image: Payout lifecycle, including the exception branches."><img src="../assets/img/seller-payouts/03-payout-status-lifecycle-800.webp" srcset="../assets/img/seller-payouts/03-payout-status-lifecycle-800.webp 800w, ../assets/img/seller-payouts/03-payout-status-lifecycle-1600.webp 1600w" sizes="(max-width: 1240px) 100vw, 1200px" width="1600" height="1062" alt="Payout lifecycle, including the exception branches." loading="lazy" decoding="async"></button><figcaption>Payout lifecycle, including the exception branches.</figcaption></figure>
+<h3><span class="chip">Decision 2</span>Show an estimated payout, don&#x27;t hide it</h3>
+<p class="lbl-p"><strong>Problem.</strong> The logistics partner finalises shipping only after weighing the package, so the final payout isn&#x27;t known when the order is placed.</p>
+<p class="lbl-p"><strong>Decision.</strong> Hiding the amount leaves sellers guessing. A number that changes silently breaks trust. So sellers see a clearly labelled <strong>Estimated payout</strong> from day one. It updates to the final amount, with the reason for any change, once every charge is confirmed.</p>
+<figure class="fig"><button class="zoom" type="button" data-full="../assets/img/seller-payouts/04-estimated-vs-final-payout-1600.webp" data-cap="Estimated and final payout for the same order." aria-label="Enlarge image: Estimated and final payout for the same order."><img src="../assets/img/seller-payouts/04-estimated-vs-final-payout-800.webp" srcset="../assets/img/seller-payouts/04-estimated-vs-final-payout-800.webp 800w, ../assets/img/seller-payouts/04-estimated-vs-final-payout-1600.webp 1600w" sizes="(max-width: 1240px) 100vw, 1200px" width="1600" height="918" alt="Estimated and final payout for the same order." loading="lazy" decoding="async"></button><figcaption>Estimated and final payout for the same order.</figcaption></figure>
+<h3><span class="chip">Decision 3</span>Pay after the return window, and cut it from 14 days to 7</h3>
+<p class="lbl-p"><strong>Problem.</strong> Sellers wanted to be paid on delivery. But if a buyer returned the product later, we&#x27;d have to claw the money back, which is slow and damages trust on both sides.</p>
+<p class="lbl-p"><strong>Decision.</strong> Payouts start only after the return window closes, and the window was shortened from 14 days to 7.</p>
+<p class="lbl-p"><strong>Trade-off.</strong> Buyers lost a week to return a product. But a new marketplace has to win sellers first. Seven days kept return risk manageable and got sellers paid a week sooner.</p>
+<figure class="fig"><button class="zoom" type="button" data-full="../assets/img/seller-payouts/05-return-window-14-to-7-days-1600.webp" data-cap="Before and after: the 14-day window cut to 7." aria-label="Enlarge image: Before and after: the 14-day window cut to 7."><img src="../assets/img/seller-payouts/05-return-window-14-to-7-days-800.webp" srcset="../assets/img/seller-payouts/05-return-window-14-to-7-days-800.webp 800w, ../assets/img/seller-payouts/05-return-window-14-to-7-days-1600.webp 1600w" sizes="(max-width: 1240px) 100vw, 1200px" width="1600" height="888" alt="Before and after: the 14-day window cut to 7." loading="lazy" decoding="async"></button><figcaption>Before and after: the 14-day window cut to 7.</figcaption></figure>
+<h3><span class="chip">Decision 4</span>Show seller dues openly, never deduct them silently</h3>
+<p class="lbl-p"><strong>Problem.</strong> Returns, RTOs and cancellations can leave a seller owing the platform money. Quietly netting that off a later payout feels like money disappearing.</p>
+<p class="lbl-p"><strong>Decision.</strong> Every deduction is tied to an order and a reason. When a seller has dues, they see the amount, the due date and a <strong>Pay now</strong> action before any restriction applies. Dues can be waived on a seller&#x27;s first few orders, so new sellers aren&#x27;t punished while they learn.</p>
+</section>
+<section class="cs-sec" id="what-changed-along-the-way" data-short="What changed along the way"><div class="lab"><div class="n">06</div><h2>What changed along the way</h2></div>
+<ul><li><strong>One “Pending” became three statuses.</strong> My first lifecycle had a single Pending state between order and payment. Mapping it against the seven systems showed it hid three different waits, so I split it into Calculating, Scheduled and Processing.</li><li><strong>Dues moved before deductions.</strong> The first dues design deducted from the next payout as a line item. It still felt like money taken without warning, so I added the due date and Pay now before anything is deducted or restricted.</li></ul>
+<figure class="fig"><button class="zoom" type="button" data-full="../assets/img/seller-payouts/06-what-changed-pending-split-1600.webp" data-cap="First draft and shipped version of the status list." aria-label="Enlarge image: First draft and shipped version of the status list."><img src="../assets/img/seller-payouts/06-what-changed-pending-split-800.webp" srcset="../assets/img/seller-payouts/06-what-changed-pending-split-800.webp 800w, ../assets/img/seller-payouts/06-what-changed-pending-split-1600.webp 1600w" sizes="(max-width: 1240px) 100vw, 1200px" width="1600" height="940" alt="First draft and shipped version of the status list." loading="lazy" decoding="async"></button><figcaption>First draft and shipped version of the status list.</figcaption></figure>
+</section>
+<section class="cs-sec" id="designing-for-edge-cases" data-short="Designing for edge cases"><div class="lab"><div class="n">07</div><h2>Designing for edge cases</h2></div>
+<p>When money is involved, every edge case is either a support ticket or a lost seller. With engineering, I mapped each one to a status and a next step on both sides.</p>
+<figure class="fig"><button class="zoom" type="button" data-full="../assets/img/seller-payouts/07-edge-cases-1600.webp" data-cap="Every edge case, mapped for the seller and the admin." aria-label="Enlarge image: Every edge case, mapped for the seller and the admin."><img src="../assets/img/seller-payouts/07-edge-cases-800.webp" srcset="../assets/img/seller-payouts/07-edge-cases-800.webp 800w, ../assets/img/seller-payouts/07-edge-cases-1600.webp 1600w" sizes="(max-width: 1240px) 100vw, 1200px" width="1600" height="1147" alt="Every edge case, mapped for the seller and the admin." loading="lazy" decoding="async"></button><figcaption>Every edge case, mapped for the seller and the admin.</figcaption></figure>
+<h3>Deep dive: a failed payout</h3>
+<p>The bank rejects a transfer because the account number is wrong. The seller sees <em>Failed</em>, the reason in plain words, and an <strong>Update bank details</strong> button. The admin sees the gateway&#x27;s error, can retry once the details are fixed, or cancel with a note the seller can read.</p>
+</section>
+<section class="cs-sec" id="the-final-design" data-short="The final design"><div class="lab"><div class="n">08</div><h2>The final design</h2></div>
+<p>The logic behind a payout is complex. The seller&#x27;s view is not. It&#x27;s built around the four questions sellers asked on every onboarding call.</p>
+<div class="tbl"><table class="stack"><thead><tr><th scope="col">Seller&#x27;s question</th><th scope="col">How the design answers it</th></tr></thead><tbody><tr><td data-l="Seller&#x27;s question">How much will I receive?</td><td data-l="How the design answers it">Payout summary at the top, with estimated and final amounts</td></tr><tr><td data-l="Seller&#x27;s question">When will I receive it?</td><td data-l="How the design answers it">A scheduled date on every payout</td></tr><tr><td data-l="Seller&#x27;s question">Why hasn&#x27;t it arrived yet?</td><td data-l="How the design answers it">A status that names the exact stage</td></tr><tr><td data-l="Seller&#x27;s question">Why was money deducted?</td><td data-l="How the design answers it">An order-level breakdown of commission, shipping and tax</td></tr></tbody></table></div>
+<p>Ops needed control rather than reassurance. The admin dashboard lets them monitor every payout, retry failed transactions, cancel payouts, waive dues and review settlement history from one place.</p>
+<figure class="fig"><button class="zoom" type="button" data-full="../assets/img/seller-payouts/08-final-design-four-questions-1600.webp" data-cap="The seller view, built around four questions." aria-label="Enlarge image: The seller view, built around four questions."><img src="../assets/img/seller-payouts/08-final-design-four-questions-800.webp" srcset="../assets/img/seller-payouts/08-final-design-four-questions-800.webp 800w, ../assets/img/seller-payouts/08-final-design-four-questions-1600.webp 1600w" sizes="(max-width: 1240px) 100vw, 1200px" width="1600" height="1024" alt="The seller view, built around four questions." loading="lazy" decoding="async"></button><figcaption>The seller view, built around four questions.</figcaption></figure>
+</section>
+<section class="cs-sec" id="working-with-engineering" data-short="Working with engineering"><div class="lab"><div class="n">09</div><h2>Working with engineering</h2></div>
+<p>I worked with both engineers throughout, not just at handoff. Together we defined payout states and transitions, business rules, settlement calculations, admin permissions and exception handling in <strong>one shared state table</strong> they built against. Agreeing on it early meant fewer surprises in development.</p>
+</section>
+<section class="cs-sec" id="outcome" data-short="Outcome"><div class="lab"><div class="n">10</div><h2>Outcome</h2></div>
+<p>There was no payout system before, so there&#x27;s no old version to measure against. What we saw after launch:</p>
+<ul><li>Sellers are paid a week sooner than the 14-day window we started with.</li><li>Payout questions from sellers dropped, and timing stopped coming up on onboarding calls.</li><li>The questions that still came in, ops answered straight from the dashboard, because every status, date and deduction was already on screen.</li></ul>
+</section>
+<section class="cs-sec" id="what-i-learned" data-short="What I learned"><div class="lab"><div class="n">11</div><h2>What I learned</h2></div>
+<h3>For a new marketplace, trust is the product.</h3>
+<p>Sellers had no history with us. Showing them exactly where their money was mattered more than any feature we could add.</p>
+<h3>The interface was the smallest part of the work.</h3>
+<p>The decisions that mattered most were when to pay, how to show deductions and what to do when a payout fails. They came out of conversations with finance, legal, engineering and ops, not out of Figma.</p>
+<h3>Next time, I&#x27;d measure from day one.</h3>
+<p>Tracking support queries and ops hours from launch would have made the impact provable, not just visible.</p>
+</section>
+</article>
+<nav class="next" aria-label="Next case study"><a href="commission-returns.html"><span class="ball" data-c="pink" aria-hidden="true">6</span><span><small>Next frame · 02</small><strong>Commission changes, from engineering ticket to self-serve</strong></span><span class="arr" aria-hidden="true">→</span></a></nav>
+</main>
+<div class="toc-wrap">
+  <nav class="toc" id="toc" aria-label="Sections"><ol><li><a href="#overview"><span>01</span>Overview</a></li><li><a href="#the-problem"><span>02</span>The problem</a></li><li><a href="#learning-the-business-before-designing"><span>03</span>Learning the business before designing</a></li><li><a href="#mapping-the-system"><span>04</span>Mapping the system</a></li><li><a href="#four-decisions-that-shaped-the-system"><span>05</span>Four decisions that shaped the system</a></li><li><a href="#what-changed-along-the-way"><span>06</span>What changed along the way</a></li><li><a href="#designing-for-edge-cases"><span>07</span>Designing for edge cases</a></li><li><a href="#the-final-design"><span>08</span>The final design</a></li><li><a href="#working-with-engineering"><span>09</span>Working with engineering</a></li><li><a href="#outcome"><span>10</span>Outcome</a></li><li><a href="#what-i-learned"><span>11</span>What I learned</a></li></ol></nav>
+  <button class="toc-btn" type="button" aria-expanded="false" aria-controls="toc"><span class="ball" data-c="black" aria-hidden="true">7</span><span class="cur">Contents</span></button>
+</div>
+<footer class="foot">
+  <div class="wrap">
+    <span>© 2026 Vansh Goel · Designed between frames.</span>
+    <a href="../index.html#contact">Fancy a frame? Get in touch →</a>
+  </div>
+</footer>
+<script src="../assets/site.js"></script>
+</body>
+</html>

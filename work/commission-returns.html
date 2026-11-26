@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Commission changes, from engineering ticket to self-serve · Vansh Goel</title>
+<meta name="description" content="Every change to a category&#x27;s commission or return window used to need a backend update. I designed an admin system where ops set them themselves across a three-level category tree, with guardrails that stop costly mistakes.">
+<meta name="theme-color" content="#0B3D2A">
+<meta property="og:title" content="Commission changes, from engineering ticket to self-serve · Vansh Goel">
+<meta property="og:description" content="Every change to a category&#x27;s commission or return window used to need a backend update. I designed an admin system where ops set them themselves across a three-level category tree, with guardrails that stop costly mistakes.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://vanshgoel.com/work/commission-returns">
+<meta property="og:image" content="https://vanshgoel.com/assets/og-commission-returns.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://vanshgoel.com/work/commission-returns">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script>try{if(sessionStorage.getItem("vg-pt")&&!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("pt-enter");sessionStorage.removeItem("vg-pt")}catch(e){}</script>
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/case.css">
+</head>
+<body class="cs-page" style="--fc:#E77FAE">
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="nav-in">
+    <a class="logo" href="../index.html" aria-label="Vansh Goel, home"><span class="ball" data-c="cue" aria-hidden="true"></span>VANSH GOEL</a>
+    <ul class="nav-links" id="menu">
+      <li><a href="../index.html#frames">Work</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#approach">Approach</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+      <li class="m-only"><a data-resume="../" href="#" target="_blank" rel="noopener" hidden>Resume ↗</a></li>
+    </ul>
+    <a class="btn btn-ghost nav-cta" data-resume="../" href="#" target="_blank" rel="noopener" hidden>Resume ↗</a>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </div>
+  <div class="cue-progress" aria-hidden="true"><i></i></div>
+</header>
+<main id="main">
+<div class="cs-head">
+  <div class="wrap">
+    <a class="back" href="../index.html#frames">← All work</a>
+    <p class="kicker"><span class="ball" data-c="pink" aria-hidden="true">6</span>Frame 02 · BellPost · Admin portal</p>
+    <h1>Commission changes, from engineering ticket to self-serve</h1>
+    <p class="lede">Every change to a category&#x27;s commission or return window used to need a backend update. I designed an admin system where ops set them themselves across a three-level category tree, with guardrails that stop costly mistakes.</p>
+    <dl class="facts"><div><dt>Role</dt><dd>Product designer, end to end: discovery to implementation</dd></div><div><dt>Company</dt><dd>BellPost</dd></div><div><dt>Worked with</dt><dd>Operations, business and engineering</dd></div><div><dt>Platform</dt><dd>Admin portal (web)</dd></div><div class=outcome><dt>Outcome</dt><dd>Ops change commissions and return windows themselves, without an engineering ticket</dd></div></dl>
+  </div>
+</div>
+<div class="cs-hero"><div class="wrap"><figure class="fig" style="max-width:896px;margin-inline:auto"><button class="zoom" type="button" data-full="../assets/img/commission-returns/hero-crop-1600.webp" aria-label="Enlarge image: BellPost admin screen for category commissions across categories and subcategories"><img src="../assets/img/commission-returns/hero-crop-800.webp" srcset="../assets/img/commission-returns/hero-crop-800.webp 800w, ../assets/img/commission-returns/hero-crop-1600.webp 896w" sizes="(max-width: 1240px) 100vw, 1200px" width="896" height="558" alt="BellPost admin screen for category commissions across categories and subcategories" fetchpriority="high"></button></figure></div>
+  <p class="read-meta"><span>5 min read</span><span>10 sections</span><span>Tap any image to enlarge</span></p>
+</div>
+<article class="cs">
+<section class="cs-sec" id="overview" data-short="Overview"><div class="lab"><div class="n">01</div><h2>Overview</h2></div>
+<p>BellPost is a home commerce marketplace where every product category carries its own commission rate and return policy.</p>
+<p>There was no place to manage those values. Every change, however small, meant asking the backend team to update the database. Once that bottleneck started slowing ops down, I was given the project and owned it end to end, from discovery through implementation.</p>
+<h3>My role</h3>
+<ul><li>Led product discovery with operations, business and engineering</li><li>Defined the system rules: defaults, inheritance, overrides and validation</li><li>Designed the end-to-end admin experience</li><li>Worked with engineering from handoff through implementation</li></ul>
+</section>
+<section class="cs-sec" id="the-problem" data-short="The problem"><div class="lab"><div class="n">02</div><h2>The problem</h2></div>
+<p>On paper, the brief was simple: give the team a way to edit commission and return values per category. It stopped being simple the moment I looked at the hierarchy.</p>
+<p>Every category could have its own commission rate and return window, and categories sat in a hierarchy of parents and children. Any time an admin updated one category, we had to answer questions like:</p>
+<ul><li>Should the child categories update too?</li><li>What if a child already has its own values?</li><li>What happens when a new category is created?</li><li>How do we prevent accidental changes across hundreds of categories?</li></ul>
+<p>Answering these questions was as much a part of my job as designing the screens.</p>
+<figure class="fig"><button class="zoom" type="button" data-full="../assets/img/commission-returns/01-before-after-self-serve-1600.webp" data-cap="From backend requests to self-serve: before vs after." aria-label="Enlarge image: From backend requests to self-serve: before vs after."><img src="../assets/img/commission-returns/01-before-after-self-serve-800.webp" srcset="../assets/img/commission-returns/01-before-after-self-serve-800.webp 800w, ../assets/img/commission-returns/01-before-after-self-serve-1600.webp 1440w" sizes="(max-width: 1240px) 100vw, 1200px" width="1440" height="920" alt="From backend requests to self-serve: before vs after." loading="lazy" decoding="async"></button><figcaption>From backend requests to self-serve: before vs after.</figcaption></figure>
+</section>
+<section class="cs-sec" id="who-these-values-affect" data-short="Who these values affect"><div class="lab"><div class="n">03</div><h2>Who these values affect</h2></div>
+<p>I started by learning how the operations team managed category settings day to day, and how each value touches profit and trust on both sides of the marketplace:</p>
+<ul><li><strong>Buyers</strong> care about the return window.</li><li><strong>Sellers</strong> care about both. Commission is what they pay us directly, and the return window decides when they get paid, since payouts are released only after it closes.</li></ul>
+<p>I also talked implementation through with engineering early, so I knew the technical constraints before defining any behaviour.</p>
+</section>
+<section class="cs-sec" id="breaking-down-the-system" data-short="Breaking down the system"><div class="lab"><div class="n">04</div><h2>Breaking down the system</h2></div>
+<p>My first step was mapping how category configurations should behave. Every product on BellPost belongs to a three-tier hierarchy:</p>
+<blockquote class="note"><p><strong>Category → Subcategory → Sub-subcategory</strong></p></blockquote>
+<p>That meant a single change at the parent level could ripple down to dozens of child categories. The challenge was making those updates predictable without taking away the flexibility to customise individual categories.</p>
+<figure class="fig"><button class="zoom" type="button" data-full="../assets/img/commission-returns/02-category-hierarchy-1600.webp" data-cap="The three-tier category hierarchy." aria-label="Enlarge image: The three-tier category hierarchy."><img src="../assets/img/commission-returns/02-category-hierarchy-800.webp" srcset="../assets/img/commission-returns/02-category-hierarchy-800.webp 800w, ../assets/img/commission-returns/02-category-hierarchy-1600.webp 1440w" sizes="(max-width: 1240px) 100vw, 1200px" width="1440" height="1080" alt="The three-tier category hierarchy." loading="lazy" decoding="async"></button><figcaption>The three-tier category hierarchy.</figcaption></figure>
+</section>
+<section class="cs-sec" id="designing-the-configuration-rules" data-short="Designing the configuration rules"><div class="lab"><div class="n">05</div><h2>Designing the configuration rules</h2></div>
+<p>The rules came before the screens. After working sessions with the tech and business teams, we agreed on four.</p>
+<h3><span class="chip">Rule 1</span>Default values for new categories</h3>
+<p>One of our first decisions was what a brand-new category should look like. Whenever an admin creates one, the system automatically assigns a <strong>10% commission</strong> and a <strong>7-day return window</strong>.</p>
+<p>These defaults match the terms in our seller agreement. They make every category ready to use immediately, while admins can still customise the values later.</p>
+<figure class="fig"><button class="zoom" type="button" data-full="../assets/img/commission-returns/03-rule1-defaults-1600.webp" data-cap="Rule 1: every new category is ready on day one." aria-label="Enlarge image: Rule 1: every new category is ready on day one."><img src="../assets/img/commission-returns/03-rule1-defaults-800.webp" srcset="../assets/img/commission-returns/03-rule1-defaults-800.webp 800w, ../assets/img/commission-returns/03-rule1-defaults-1600.webp 1440w" sizes="(max-width: 1240px) 100vw, 1200px" width="1440" height="960" alt="Rule 1: every new category is ready on day one." loading="lazy" decoding="async"></button><figcaption>Rule 1: every new category is ready on day one.</figcaption></figure>
+<h3><span class="chip">Rule 2</span>Parent-child inheritance</h3>
+<p>Next, we decided how updates should flow through the hierarchy. When a parent category changes, its child categories inherit the new values automatically, but only if they are still using inherited values. A child with its own custom values is left alone.</p>
+<figure class="fig"><button class="zoom" type="button" data-full="../assets/img/commission-returns/04-rule2-inheritance-1600.webp" data-cap="Rule 2: children follow their parent, unless customised." aria-label="Enlarge image: Rule 2: children follow their parent, unless customised."><img src="../assets/img/commission-returns/04-rule2-inheritance-800.webp" srcset="../assets/img/commission-returns/04-rule2-inheritance-800.webp 800w, ../assets/img/commission-returns/04-rule2-inheritance-1600.webp 1440w" sizes="(max-width: 1240px) 100vw, 1200px" width="1440" height="1000" alt="Rule 2: children follow their parent, unless customised." loading="lazy" decoding="async"></button><figcaption>Rule 2: children follow their parent, unless customised.</figcaption></figure>
+<h3><span class="chip">Rule 3</span>Preventing accidental overrides</h3>
+<p>During a discussion with engineering, one question came up: what happens when an admin updates a parent that already has customised children?</p>
+<p>Silently replacing those values could cause serious business problems. So I designed a confirmation flow instead. Whenever customised child categories exist, the system asks the admin whether to override them or keep the existing customisations.</p>
+<p>It&#x27;s a small interaction, but it prevents costly mistakes while keeping admins in full control.</p>
+<figure class="fig"><button class="zoom" type="button" data-full="../assets/img/commission-returns/05-rule3-override-confirmation-1600.webp" data-cap="Rule 3: no silent overwrites." aria-label="Enlarge image: Rule 3: no silent overwrites."><img src="../assets/img/commission-returns/05-rule3-override-confirmation-800.webp" srcset="../assets/img/commission-returns/05-rule3-override-confirmation-800.webp 800w, ../assets/img/commission-returns/05-rule3-override-confirmation-1600.webp 1440w" sizes="(max-width: 1240px) 100vw, 1200px" width="1440" height="1000" alt="Rule 3: no silent overwrites." loading="lazy" decoding="async"></button><figcaption>Rule 3: no silent overwrites.</figcaption></figure>
+<h3><span class="chip">Rule 4</span>Validation rules</h3>
+<p>Because these values directly affect business operations, I wanted to stop incorrect data before it ever reached the backend.</p>
+<div class="tbl"><table class="stack"><thead><tr><th scope="col">Field</th><th scope="col">Allowed range</th><th scope="col">Format</th></tr></thead><tbody><tr><td data-l="Field">Commission</td><td data-l="Allowed range">1% to 50%</td><td data-l="Format">Decimals allowed, up to one decimal place</td></tr><tr><td data-l="Field">Return window</td><td data-l="Allowed range">0 to 90 days</td><td data-l="Format">Whole numbers only</td></tr></tbody></table></div>
+<p>Handling validation in the interface cut down on unnecessary backend errors and made the experience more predictable for admins.</p>
+<figure class="fig"><button class="zoom" type="button" data-full="../assets/img/commission-returns/06-rule4-validation-1600.webp" data-cap="Rule 4: catch bad data before it reaches the backend." aria-label="Enlarge image: Rule 4: catch bad data before it reaches the backend."><img src="../assets/img/commission-returns/06-rule4-validation-800.webp" srcset="../assets/img/commission-returns/06-rule4-validation-800.webp 800w, ../assets/img/commission-returns/06-rule4-validation-1600.webp 1440w" sizes="(max-width: 1240px) 100vw, 1200px" width="1440" height="1060" alt="Rule 4: catch bad data before it reaches the backend." loading="lazy" decoding="async"></button><figcaption>Rule 4: catch bad data before it reaches the backend.</figcaption></figure>
+</section>
+<section class="cs-sec" id="designing-for-simplicity" data-short="Designing for simplicity"><div class="lab"><div class="n">06</div><h2>Designing for simplicity</h2></div>
+<p>With the rules settled, the screens could stay simple: a clear category tree, inline editing, consistent validation, minimal navigation, and a confirmation before anything destructive.</p>
+</section>
+<section class="cs-sec" id="working-with-engineering" data-short="Working with engineering"><div class="lab"><div class="n">07</div><h2>Working with engineering</h2></div>
+<p>This was never a handoff. Engineering and I defined inheritance, validation, defaults and override behaviour together, and wrote them down before development began. Agreeing early removed ambiguity during the build and made it much smoother.</p>
+</section>
+<section class="cs-sec" id="planning-for-the-future" data-short="Planning for the future"><div class="lab"><div class="n">08</div><h2>Planning for the future</h2></div>
+<p>Early on, we explored supporting seller-specific commission rates on top of the global category configuration. After discussions with engineering and the founder, we decided to postpone it. Seller-specific pricing would have introduced extra operational complexity, legal considerations and historical data management.</p>
+<p>Rather than delay the release, we focused on solving the core problem first, and kept the door open for seller-level rates later.</p>
+<figure class="fig"><button class="zoom" type="button" data-full="../assets/img/commission-returns/07-future-scope-1600.webp" data-cap="Solve the core problem first: v1 scope vs postponed." aria-label="Enlarge image: Solve the core problem first: v1 scope vs postponed."><img src="../assets/img/commission-returns/07-future-scope-800.webp" srcset="../assets/img/commission-returns/07-future-scope-800.webp 800w, ../assets/img/commission-returns/07-future-scope-1600.webp 1440w" sizes="(max-width: 1240px) 100vw, 1200px" width="1440" height="1040" alt="Solve the core problem first: v1 scope vs postponed." loading="lazy" decoding="async"></button><figcaption>Solve the core problem first: v1 scope vs postponed.</figcaption></figure>
+</section>
+<section class="cs-sec" id="outcome" data-short="Outcome"><div class="lab"><div class="n">09</div><h2>Outcome</h2></div>
+<p>The final system gave the operations team full control over commission percentages and return windows, without relying on engineering for every update. Admins can now:</p>
+<ul><li>Configure commission at the category level</li><li>Configure return periods</li><li>Apply default values to new categories automatically</li><li>Update parent categories safely</li><li>Preserve customised child configurations</li><li>Avoid accidental overrides</li></ul>
+<p>The feature is now a core part of BellPost&#x27;s admin portal and supports daily marketplace operations.</p>
+</section>
+<section class="cs-sec" id="what-i-learned" data-short="What I learned"><div class="lab"><div class="n">10</div><h2>What I learned</h2></div>
+<h3>Good internal tools hide rules, not options.</h3>
+<p>The value wasn&#x27;t in more settings. It was in making inheritance and overrides predictable enough that ops could trust a single click.</p>
+<h3>Define the behaviour before the interface.</h3>
+<p>The most important decisions on this project were made before I opened Figma, in conversations about business rules, edge cases and technical constraints.</p>
+<h3>The job goes beyond screens.</h3>
+<p>Being in the room from the first business discussion to implementation showed me the work is balancing business goals, technical constraints and usability, while keeping the tool simple for the people who use it every day.</p>
+</section>
+</article>
+<nav class="next" aria-label="Next case study"><a href="ai-image-workflow.html"><span class="ball" data-c="blue" aria-hidden="true">5</span><span><small>Next frame · 03</small><strong>An AI pipeline that filled the feed before launch</strong></span><span class="arr" aria-hidden="true">→</span></a></nav>
+</main>
+<div class="toc-wrap">
+  <nav class="toc" id="toc" aria-label="Sections"><ol><li><a href="#overview"><span>01</span>Overview</a></li><li><a href="#the-problem"><span>02</span>The problem</a></li><li><a href="#who-these-values-affect"><span>03</span>Who these values affect</a></li><li><a href="#breaking-down-the-system"><span>04</span>Breaking down the system</a></li><li><a href="#designing-the-configuration-rules"><span>05</span>Designing the configuration rules</a></li><li><a href="#designing-for-simplicity"><span>06</span>Designing for simplicity</a></li><li><a href="#working-with-engineering"><span>07</span>Working with engineering</a></li><li><a href="#planning-for-the-future"><span>08</span>Planning for the future</a></li><li><a href="#outcome"><span>09</span>Outcome</a></li><li><a href="#what-i-learned"><span>10</span>What I learned</a></li></ol></nav>
+  <button class="toc-btn" type="button" aria-expanded="false" aria-controls="toc"><span class="ball" data-c="pink" aria-hidden="true">6</span><span class="cur">Contents</span></button>
+</div>
+<footer class="foot">
+  <div class="wrap">
+    <span>© 2026 Vansh Goel · Designed between frames.</span>
+    <a href="../index.html#contact">Fancy a frame? Get in touch →</a>
+  </div>
+</footer>
+<script src="../assets/site.js"></script>
+</body>
+</html>
